@@ -3,7 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27130.2036
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VMS", "VMS\VMS.csproj", "{2EF6B224-B3FA-4965-A54D-A969DD97D0C7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VMS", "VMS\VMS.csproj", "{2EF6B224-B3FA-4965-A54D-A969DD97D0C7}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{7F75AD1F-114C-40E3-8197-F4E5C7569B2F}"
+	ProjectSection(SolutionItems) = preProject
+		..\..\..\..\..\..\Projects\MVCSample\WebTest\WebTest\App_Data\Database1.mdf = ..\..\..\..\..\..\Projects\MVCSample\WebTest\WebTest\App_Data\Database1.mdf
+		..\..\..\..\..\..\Projects\MVCSample\WebTest\WebTest\App_Data\Database1_log.LDF = ..\..\..\..\..\..\Projects\MVCSample\WebTest\WebTest\App_Data\Database1_log.LDF
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
