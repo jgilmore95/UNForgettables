@@ -1,0 +1,47 @@
+﻿@model VMS.Models.UserLoginInput
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=5" />
+    <title>UserLogin</title>
+    <link rel="stylesheet" href="/css/styles.css" />
+    <link rel="stylesheet" href="/lib/bootstrap/dist/css/bootstrap.css" />
+</head>
+<body>
+    <style>
+        body {
+            word-spacing: 0.3em;
+            background-color: #c5ece7;
+            margin: 40px;
+            padding: 0;
+        }
+    </style>
+    <div class="panel panel-success">
+        <div class="panel-heading text-center"><h4>Login to your account</h4></div>
+        <div class="panel-heading text-center"><h5>Pleae enter your Username and Password.</h5></div>
+        <div class="panel-body">
+            <form class="p-a-1" asp-action="UserLogin" method="post">
+                <div asp-validation-summary="All"></div>
+                <div class="form-group">
+                    <label asp-for="Username ">Username:</label>
+                    <input class="form-control" asp-for="Username " />
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="Password">Password:</label>
+                    <input class="form-control" asp-for="Password" />
+                </div>
+
+                <div class="text-center">
+                    <button class="btn btn-primary" type="submit">
+                        Login
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
