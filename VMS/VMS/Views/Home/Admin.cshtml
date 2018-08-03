@@ -1,5 +1,26 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
-@{
+﻿@*@{ 
+    Layout = null;
 }
+    commenting out cause template looks aight
+    *@
+
+<!DOCTYPE html>
+<html>
+<head>
+        <meta name="viewport" content="width=device-width" />
+        <title>Admin Landing Page</title>
+        <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
+</head>
+    <body>
+        <header>Admin</header>
+        <section>
+            <article>
+                <ul>
+               <li><a asp-action="ManageVol">Manage Volunteer</a></li>
+                <li><a asp-action="ManageOp">Manage Opprotunity</a></li>
+                    </ul>
+
+            </article>
+        </section>
+    </body>
+</html>
