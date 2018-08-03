@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -27,7 +28,7 @@ namespace VMS.Models
         public string Addresstwo { get; set; }
         [Required(ErrorMessage = "Please enter state")]
         public string State { get; set; }
-        [Required(ErrorMessage = "Please enter City")]
+        [Required(ErrorMesfixed modeklsage = "Please enter City")]
         public string City { get; set; }
         [Required(ErrorMessage = "Please enter country")]
         public string Country { get; set; }
