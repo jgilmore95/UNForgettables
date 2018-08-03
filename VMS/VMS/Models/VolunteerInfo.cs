@@ -28,7 +28,7 @@ namespace VMS.Models
         public string Addresstwo { get; set; }
         [Required(ErrorMessage = "Please enter state")]
         public string State { get; set; }
-        [Required(ErrorMesfixed modeklsage = "Please enter City")]
+        [Required(ErrorMessage = "Please enter City")]
         public string City { get; set; }
         [Required(ErrorMessage = "Please enter country")]
         public string Country { get; set; }
