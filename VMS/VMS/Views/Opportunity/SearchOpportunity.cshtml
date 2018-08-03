@@ -1,0 +1,38 @@
+﻿@*
+    SEARCH OPPORTUNITY DATABASE: What do we wanna search by ? 
+*@
+@model VMS.Models.VolunteerInfo
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width-device-width" />
+    <title>SearchOpportunity</title>
+    <link rel="stylesheet" href="~/css/styles.css" /> @*need to change to our styles sheet *@
+</head>
+<body>
+    <nav class="TOPnavbar">
+        @* navigation bar still needs named and declared where its position will be
+            <li><a asp-action="Index">Home</a></li>
+            <li><a asp-action="VolunteerCreate">Create Volunnteer Profile</a></li>
+            <li><a asp-action="SearchVolunteer">Search For Volunteer</a></li>
+            <li><a asp-action="SearchOpportunity">Search For Opportunity</a></li>
+            <li><a asp-action="CustomerProfile">Customer Profile</a></li> change to our volunteer account view page
+            <li><a asp-action="AccountEdit">Edit Account</a></li>  change to the volunteers way to edit *@
+    </nav>
+    <div class="panel panel-success">
+        <div class="panel-heading text-center"><h4>Search For An Opportuinity</h4></div>
+        <div class="panel-body">
+            <form class="p-a-1" asp-action="SearchOpportunity" method="post">
+                <div asp-validation-summary="All"></div>
+                <div class="form-group">
+                    <label asp-for="SearchOpp">Search For A Volunteer by ****:</label>
+                    <input class="form-control" asp-for="SearchOpp" />
+                </div>
+        </div>
+        </form>
+    </div>
+</body>
+</html>
