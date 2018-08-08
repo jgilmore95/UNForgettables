@@ -1,16 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Diagnostics;
 using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
-using VMS.Models;
+using System.Web;
+using System.Web.Mvc;
 
 namespace VMS.Controllers
 {
     public class HomeController : Controller
     {
-        public IActionResult Index()
+        public ActionResult Index()
         {
             return View("MyView");
         }
@@ -20,7 +18,7 @@ namespace VMS.Controllers
         {
             return View();
         }
-
+        /*
         [HttpPost]
         public ViewResult UserLogin(UserLoginInput userLoginInput)
         {
@@ -34,7 +32,7 @@ namespace VMS.Controllers
                 return View();
             }
         }
-
+        */
         public ViewResult MyAdministratorPage()
         {
             int hour = DateTime.Now.Hour;
@@ -48,39 +46,29 @@ namespace VMS.Controllers
             return View();
         }
 
-
-
-
-
-
-
-
-
-
-
-        public IActionResult About()
+        public ActionResult About()
         {
             ViewData["Message"] = "Your application description page.";
 
             return View();
         }
 
-        public IActionResult Contact()
+        public ActionResult Contact()
         {
             ViewData["Message"] = "Your contact page.";
 
             return View();
         }
-
-        public IActionResult Error()
+        /*
+        public ActionResult Error()
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
-        }
-        public IActionResult Admin()
+        }*/
+        public ActionResult Admin()
         {
             return View();
         }
-        public IActionResult AddOp()
+        public ActionResult AddOp()
         {
             return View();
         }

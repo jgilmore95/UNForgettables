@@ -2,24 +2,24 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
+using System.Web.Mvc;
 
 namespace VMS.Controllers
 {
     public class OpportunityController : Controller
     {
-        public IActionResult Index()
+        public ActionResult Index()
         {
             return View();
         }
   
-        public IActionResult ManageOpportunity()
+        public ActionResult ManageOpportunity()
         {
             ViewData["Message"] = "Your Opportunity page.";
 
             return View();
         }
-        public IActionResult DeleteOpportunity()
+        public ActionResult DeleteOpportunity()
         {
             ViewData["Message"] = "Your Opportunity page.";
 
