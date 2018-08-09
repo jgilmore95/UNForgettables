@@ -21,25 +21,25 @@ namespace VMS.Controllers
         }
         public ActionResult DeleteOpportunity()
         {
+            var model = VMS.DAL.OpportunityDAL.GetAll();
+
             ViewData["Message"] = "Your Opportunity page.";
+
+            return View(model);
+        }
+
+        [HttpPost]
+        public ActionResult Delete(Int32 id)
+        {
+            VMS.DAL.OpportunityDAL ODAL = new VMS.DAL.OpportunityDAL();
+
+            ODAL.DeleteOpportunity(id);
+
+            return RedirectToAction("");
 
             return View();
         }
- /*
-        public ActionResult Delete(int? id)
-        {
-            if (id == null)
-            {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
-            }
-            PersonalDetail personalDetail = db.PersonalDetails.Find(id);
-            if (personalDetail == null)
-            {
-                return HttpNotFound();
-            }
-            return View(personalDetail);
-        }
-     
+/*     
         // POST: PersonalDetails/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]

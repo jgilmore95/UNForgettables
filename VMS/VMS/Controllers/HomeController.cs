@@ -18,6 +18,12 @@ namespace VMS.Controllers
         {
             return View();
         }
+        public ActionResult ManageOpportunity()
+        {
+            ViewData["Message"] = "Your Opportunity page.";
+
+            return View();
+        }
         /*
         [HttpPost]
         public ViewResult UserLogin(UserLoginInput userLoginInput)

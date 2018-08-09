@@ -159,6 +159,7 @@
     <Compile Include="Models\DBConnection.cs" />
     <Compile Include="Models\ErrorViewModel.cs" />
     <Compile Include="Models\MyAdministratorPage.cs" />
+    <Compile Include="Models\Opportunity.cs" />
     <Compile Include="Models\Repository.cs" />
     <Compile Include="Models\UserLoginInput.cs" />
     <Compile Include="Models\VolunteerInfo.cs" />
