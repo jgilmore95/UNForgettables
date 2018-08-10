@@ -19,25 +19,23 @@ namespace VMS.Controllers
 
             return View();
         }
+
         public ActionResult DeleteOpportunity()
         {
-            var model = VMS.DAL.OpportunityDAL.GetAll();
+            var model = VMS.DAL.OpportunityDAL.GetAllActive();
 
             ViewData["Message"] = "Your Opportunity page.";
 
             return View(model);
         }
 
-        [HttpPost]
         public ActionResult Delete(Int32 id)
         {
             VMS.DAL.OpportunityDAL ODAL = new VMS.DAL.OpportunityDAL();
 
             ODAL.DeleteOpportunity(id);
 
-            return RedirectToAction("");
-
-            return View();
+            return RedirectToAction("DeleteOpportunity");
         }
 /*     
         // POST: PersonalDetails/Delete/5

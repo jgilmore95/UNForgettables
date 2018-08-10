@@ -19,8 +19,6 @@
                 <tr>
                     <td><strong>Name</strong></td>
                     <td><strong>Location</strong></td>
-                    <td><strong>Description</strong></td>
-                    <td><strong>Time</strong></td>
                     <td><strong>Date Entered</strong></td>
                     <td><strong>Date Expired</strong></td>
                     <td><strong>Status</strong></td>
@@ -30,12 +28,11 @@
                 {
                 <tr>
                     <td>@opp.Description</td>
-                    <td>@opp.CenterID</td>
-                    <td>@opp.Description</td>
-                    <td>@opp.Description</td>
-                    <td>@opp.DateEntered</td>
-                    <td>@opp.DateExpired</td>
-                    <td>@opp.OpportunityStatusID</td>
+                    <td>@opp.Center</td>
+                    <td>@opp.DateEntered.ToShortDateString()</td>
+                    <td>@opp.DateExpired.ToShortDateString()</td>
+                    <td>@opp.OpportunityStatus</td>
+                    <td>@Html.ActionLink("Delete", "Delete", new { id = opp.OpportunityID }) </td>
                 </tr>
                 }
 

@@ -17,15 +17,10 @@ namespace VMS.DAL
             {
                 cmd = Connect();
 
-                cmd.CommandText = "UPDATE Opportunity Set IsDeleted = 1 WHERE OpportunityID = " + opportunityID + ";";
+                cmd.CommandText = "UPDATE Opportunity Set IsDeleted = 1 WHERE OpportunityID = " + opportunityID.ToString() + ";";
                 cmd.CommandType = System.Data.CommandType.Text;
 
-                OleDbDataReader rdr = cmd.ExecuteReader(System.Data.CommandBehavior.CloseConnection);
-
-                while (rdr.Read() == true)
-                {
-                    System.Diagnostics.Debug.WriteLine(rdr["Description"].ToString());
-                }
+                cmd.ExecuteNonQuery();
             }
             catch (Exception e)
             {
@@ -37,7 +32,7 @@ namespace VMS.DAL
             }
         }
 
-        public static List<Opportunity> GetAll()
+        public static List<Opportunity> GetAllActive()
         {
             OleDbCommand cmd = null;
 
@@ -47,7 +42,7 @@ namespace VMS.DAL
             {
                 cmd = Connect();
 
-                cmd.CommandText = "SELECT OpportunityID, CenterID, Description, DateEntered, DateExpired, ContactName, OpportunityStatusID, IsDeleted FROM Opportunity ORDER BY Description;";
+                cmd.CommandText = "SELECT [Opportunity].OpportunityID, [Center].Name, [Opportunity].Description, [Opportunity].DateEntered, [Opportunity].DateExpired, [Opportunity].ContactName, [Opportunity].IsDeleted, [OpportunityStatus].OpportunityStatus FROM OpportunityStatus INNER JOIN(Center INNER JOIN Opportunity ON Center.CenterID = Opportunity.CenterID) ON OpportunityStatus.OpportunityStatusID = Opportunity.OpportunityStatusID WHERE [Opportunity].IsDeleted = 0 ORDER BY [Opportunity].Description;";
                 cmd.CommandType = System.Data.CommandType.Text;
 
                 OleDbDataReader rdr = cmd.ExecuteReader(System.Data.CommandBehavior.CloseConnection);
@@ -57,12 +52,12 @@ namespace VMS.DAL
                     Opportunity opp = new Opportunity();
 
                     opp.OpportunityID = Convert.ToInt32(rdr["OpportunityID"].ToString());
-                    opp.CenterID = Convert.ToInt32(rdr["CenterID"].ToString());
+                    opp.Center = rdr["Name"].ToString();
                     opp.Description = rdr["Description"].ToString();                   
                     opp.DateEntered = Convert.ToDateTime(rdr["DateEntered"].ToString());
                     opp.DateExpired = Convert.ToDateTime(rdr["DateExpired"].ToString());
                     opp.ContactName = rdr["ContactName"].ToString();
-                    opp.OpportunityStatusID = Convert.ToInt32(rdr["OpportunityStatusID"].ToString());
+                    opp.OpportunityStatus = rdr["OpportunityStatus"].ToString();
                     opp.IsDeleted = Convert.ToBoolean(rdr["IsDeleted"].ToString());
 
                     opps.Add(opp);
