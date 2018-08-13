@@ -1,4 +1,9 @@
-﻿using System;
+﻿/**
+ * Robert Bolden
+ * 
+ * Used to get and set data from the database so that it can be displayed in the page
+ **/
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -16,8 +21,5 @@ namespace VMS.Models
             public string OpportunityStatus { get; set; }
             public bool IsDeleted { get; set; }
     }
-    public class DeleteOpportunity
-    {
 
-    }
 }

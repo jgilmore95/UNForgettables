@@ -1,4 +1,9 @@
-﻿using System;
+﻿/**
+ * Robert Bolden
+ * 
+ * This allows for the connection of the database to be used for functionalllity of the website.
+ **/
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;

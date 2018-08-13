@@ -159,6 +159,8 @@
     <Compile Include="Models\DBConnection.cs" />
     <Compile Include="Models\ErrorViewModel.cs" />
     <Compile Include="Models\MyAdministratorPage.cs" />
+    <Compile Include="Models\VolunteerOpportunity.cs" />
+    <Compile Include="Models\OpportunityVolunteer.cs" />
     <Compile Include="Models\Opportunity.cs" />
     <Compile Include="Models\Repository.cs" />
     <Compile Include="Models\UserLoginInput.cs" />
@@ -218,6 +220,8 @@
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Shared\_ValidationScriptsPartial.cshtml" />
+    <Content Include="Views\Opportunity\ViewOpportunityVolunteer.cshtml" />
+    <Content Include="Views\Volunteer\ViewVolunteerOpportunity.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

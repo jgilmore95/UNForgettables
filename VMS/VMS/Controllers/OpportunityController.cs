@@ -1,4 +1,9 @@
-﻿using System;
+﻿/**
+ * Robert Bolden
+ * 
+ * This alllows for the use of navigation from page to page via opportunity.  It also implements some of the views using models
+ **/
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -29,6 +34,15 @@ namespace VMS.Controllers
             return View(model);
         }
 
+        public ActionResult ViewOpportunityVolunteer()
+        {
+            var model = VMS.DAL.OpportunityDAL.GetAllOppVols();
+
+            ViewData["Message"] = "Your Opportunity Volunteers page.";
+
+            return View(model);
+        }
+
         public ActionResult Delete(Int32 id)
         {
             VMS.DAL.OpportunityDAL ODAL = new VMS.DAL.OpportunityDAL();
@@ -37,24 +51,5 @@ namespace VMS.Controllers
 
             return RedirectToAction("DeleteOpportunity");
         }
-/*     
-        // POST: PersonalDetails/Delete/5
-        [HttpPost, ActionName("Delete")]
-        [ValidateAntiForgeryToken]
-        public ActionResult DeleteConfirmed(int id)
-        {
-            PersonalDetail personalDetail = db.Database1.Find(id);
-            db.PersonalDetails.Remove(personalDetail);
-            db.SaveChanges();
-            return RedirectToAction("Index");
-        }
-        //private ApplicationDbContext db = new ApplicationDbContext();
-
-        // GET: PersonalDetails
-      
-        public ActionResult Index()
-        {
-            return View(db.PersonalDetails.ToList());
-        }*/
     }
 }
