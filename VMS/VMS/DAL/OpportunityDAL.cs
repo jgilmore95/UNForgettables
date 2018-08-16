@@ -150,7 +150,7 @@ namespace VMS.DAL
             catch (Exception e)
             {
                 throw;
-                //return null;
+                //return null
             }
             finally
             {
@@ -159,6 +159,39 @@ namespace VMS.DAL
 
             return Volunteersopps;
         }
+            public static List<Opportunity> addOpp()
+            {
+                OleDbCommand cmd = null;
+
+                List<Opportunity> newOpp = new List<Opportunity>();
+
+                try
+                {
+                    cmd = Connect();
+                    cmd.CommandText = "INSERT INTO [Opportunity] (OpportunityID, Center, Description, DateEntered, DateExpired, ContactName)";
+                    cmd.CommandType = System.Data.CommandType.Text;
+
+                    OleDbDataReader rdr = cmd.ExecuteReader(System.Data.CommandBehavior.CloseConnection);
+
+                    while (rdr.Read() == true)
+                    {
+
+                    }
+                }
+            catch (Exception e)
+            {
+                throw;
+                //return null
+            }
+            finally
+            {
+                CloseConnection(cmd);
+            }
+                return newOpp;
+
+            }
+
+        }
     }
-}
+
 
