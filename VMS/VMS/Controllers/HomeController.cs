@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Web;
+using System.Threading.Tasks;
 using System.Web.Mvc;
 
 namespace VMS.Controllers
@@ -24,7 +24,7 @@ namespace VMS.Controllers
 
             return View();
         }
-        /*
+        
         [HttpPost]
         public ViewResult UserLogin(UserLoginInput userLoginInput)
         {
@@ -38,7 +38,7 @@ namespace VMS.Controllers
                 return View();
             }
         }
-        */
+        
         public ViewResult MyAdministratorPage()
         {
             return View();
