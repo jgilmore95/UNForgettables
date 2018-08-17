@@ -51,5 +51,12 @@ namespace VMS.Controllers
 
             return RedirectToAction("DeleteOpportunity");
         }
+        
+        public ActionResult Add()
+        {
+            var model = VMS.DAL.OpportunityDAL.GetAllActive();
+            
+            return RedirectToAction("CreateOpportunity");
+        }
     }
 }

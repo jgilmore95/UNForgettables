@@ -222,6 +222,7 @@
     <Content Include="Views\Shared\_ValidationScriptsPartial.cshtml" />
     <Content Include="Views\Opportunity\ViewOpportunityVolunteer.cshtml" />
     <Content Include="Views\Volunteer\ViewVolunteerOpportunity.cshtml" />
+    <Content Include="Views\Opportunity\CreateOpportunity.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
