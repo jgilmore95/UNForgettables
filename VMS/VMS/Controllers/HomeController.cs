@@ -1,8 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
+using System.Web;
 using System.Web.Mvc;
+using VMS.Models;
 
 namespace VMS.Controllers
 {
@@ -18,13 +19,14 @@ namespace VMS.Controllers
         {
             return View();
         }
+
         public ActionResult ManageOpportunity()
         {
             ViewData["Message"] = "Your Opportunity page.";
 
             return View();
         }
-        
+
         [HttpPost]
         public ViewResult UserLogin(UserLoginInput userLoginInput)
         {
@@ -38,7 +40,7 @@ namespace VMS.Controllers
                 return View();
             }
         }
-        
+
         public ViewResult MyAdministratorPage()
         {
             return View();
