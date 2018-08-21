@@ -31,6 +31,13 @@ namespace VMS.Controllers
 
             return View(model);
         }
-
+        public ActionResult SearchVolunteer()
+        {
+            return View();
+        }
+        public ActionResult VolunteerCreate()
+        {
+            return View();
+        }
     }
 }

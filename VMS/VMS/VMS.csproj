@@ -166,7 +166,6 @@
     <Compile Include="Models\UserLoginInput.cs" />
     <Compile Include="Models\VolunteerInfo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="System\Web\HttpApplication.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap-theme.css" />
