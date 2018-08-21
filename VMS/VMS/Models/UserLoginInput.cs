@@ -4,9 +4,10 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.ComponentModel.DataAnnotations;
 
+
 namespace VMS.Models
 {
-    public class UserLoginInput
+    public class UserLoginInput 
     {
         [Display(Name = "User Name")]
         [Required(ErrorMessage = "Please enter a valid Username")]
