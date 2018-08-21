@@ -21,5 +21,8 @@ namespace VMS.Models
             public string OpportunityStatus { get; set; }
             public bool IsDeleted { get; set; }
     }
+    public class CreateOpportunity
+    {
 
+    }
 }

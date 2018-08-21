@@ -58,5 +58,13 @@ namespace VMS.Controllers
             
             return RedirectToAction("CreateOpportunity");
         }
+        public ActionResult CreateOpportunity()
+        {
+            return View();
+        }
+        public ActionResult SearchOpportunity()
+        {
+            return View();
+        }
     }
 }
