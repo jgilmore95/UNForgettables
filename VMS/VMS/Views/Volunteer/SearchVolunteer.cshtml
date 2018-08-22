@@ -1,0 +1,34 @@
+﻿@*
+  SEARCH VOLUNTEER DATABASE: Uses Last Name
+*@
+@model VMS.Models.VolunteerInfo
+@{ 
+ 
+}
+<!DOCTYPE html> 
+<html>
+<head>
+    <meta name="viewport" content="width-device-width" />
+    <title>SearchVolunteer</title>
+    <link rel="stylesheet" href="~/css/styles.css" /> @*need to change to our styles sheet *@
+</head>
+<body>
+    <div class="panel panel-success">
+        <div class="panel-heading text-center"><h4>Search For A Volunteer</h4></div>
+        <div class="panel-body">
+            <form class="p-a-1" asp-action="SearchVolunteer" method="post">
+                <div asp-validation-summary="All"></div>
+                <div class="form-group">
+                    <label asp-for="SearchVol">Search For A Volunteer by last name:</label>
+                    <input class="form-control" asp-for="SearchVol" />
+                </div>
+                <div class="text-center">
+                    <button class="btn btn-group-vertical" type="submit">
+                        Submit
+                    </button>
+                </div>
+            </form>
+            </div>
+        </div>
+</body>
+</html>

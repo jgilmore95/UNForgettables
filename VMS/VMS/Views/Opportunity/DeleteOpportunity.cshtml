@@ -1,0 +1,44 @@
+﻿@model List<VMS.Models.Opportunity>
+<br />
+<br />
+<table width="60%" align="center">
+    <tr align="center">
+        <td>
+            <h1>DeleteOpportunity</h1>
+        </td>
+    </tr>
+    <tr align="center">
+        <td>
+            <p>Please press the delete button to delete an Opportunity</p>
+        </td>
+    </tr>
+    <tr align="center">
+        <td>
+
+            <table border="1" width="100%">
+                <tr>
+                    <td><strong>Name</strong></td>
+                    <td><strong>Location</strong></td>
+                    <td><strong>Date Entered</strong></td>
+                    <td><strong>Date Expired</strong></td>
+                    <td><strong>Status</strong></td>
+                    <td><strong>Delete</strong></td>
+                </tr>
+                @foreach (var opp in Model)
+                {
+                <tr>
+                    <td>@opp.Description</td>
+                    <td>@opp.Center</td>
+                    <td>@opp.DateEntered.ToShortDateString()</td>
+                    <td>@opp.DateExpired.ToShortDateString()</td>
+                    <td>@opp.OpportunityStatus</td>
+                    <td>@Html.ActionLink("Delete", "Delete", new { id = opp.OpportunityID }) </td>
+                </tr>
+                }
+
+            </table>
+        </td>
+    </tr>
+</table>
+
+

@@ -1,0 +1,33 @@
+﻿@model List<VMS.Models.OpportunityVolunteer>
+<br />
+<br />
+<table width="60%" align="center">
+    <tr align="center">
+        <td>
+            <h1>View Opportunity/Volunteers</h1>
+        </td>
+    </tr>
+    <tr align="center">
+        <td>
+
+            <table border="1" width="100%">
+                <tr>
+                    <td><strong>Center Name</strong></td>
+                    <td><strong>Opportunity Description</strong></td>
+                    <td><strong>Volunteer Name</strong></td>
+                </tr>
+                @foreach (var oppvol in Model)
+                {
+                    <tr>
+                        <td>@oppvol.CenterName</td>
+                        <td>@oppvol.Description</td>
+                        <td>@oppvol.VolunteerName</td>
+                    </tr>
+                }
+
+            </table>
+        </td>
+    </tr>
+</table>
+
+

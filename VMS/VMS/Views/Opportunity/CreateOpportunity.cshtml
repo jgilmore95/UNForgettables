@@ -1,0 +1,60 @@
+﻿@model VMS.Models.Opportunity
+
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Create Opportunity</title>
+    <link rel="stylesheet" href="" /> @*need a stylesheet*@
+</head>
+<body>
+    <nav class="TOPnavbar">
+        <ul>
+
+
+
+        </ul>
+    </nav>
+    
+    
+    <div class="panel-heading text-center"><h4>Opportunity Creation</h4>
+    <div class="panel-body">
+        <form class="p-a-1" asp-action="CreateOpportunity" method="post">
+            <div class="form-group">
+                <label asp-for="OpportunityID">Opportunity ID:</label>
+                <input class="form-group" asp-for="OpportunityID" />
+            </div>
+            <div class="form-group">
+                <label asp-for="Center">Center Name:</label>
+                <input class="form-group" asp-for="Center" />
+             </div>
+            <div class="form-group">
+                <label asp-for="Description">Description:</label>
+                <input class="form-group" asp-for="Description" />
+             </div>
+            <div class="form-group">
+                <label asp-for="DateEntered">Date Entered:</label>
+                <input class="form-group" asp-for="DateEntered" />
+            </div>
+            <div class="form-group">
+                <label asp-for="DateExpired">Date Expired:</label>
+                <input class="form-group" asp-for="DateExpired" />
+            </div>
+            <div class="form-group">
+                <label asp-for="ContactName">Contact Name:</label>
+                <input class="form-group" asp-for="ContactName" />
+            </div>
+            <div class="text-center">
+                <button class="btn btn-primary" type="submit">
+                    Submit
+                </button>
+            </div>
+        </form>
+              
+    </div>
+    </div>
+    
+</body>
+</html>
