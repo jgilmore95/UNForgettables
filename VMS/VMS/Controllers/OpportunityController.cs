@@ -8,6 +8,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Web.Mvc;
+using VMS.Models;
 
 namespace VMS.Controllers
 {
@@ -58,9 +59,21 @@ namespace VMS.Controllers
             
             return RedirectToAction("CreateOpportunity");
         }
+        [HttpGet]
         public ActionResult CreateOpportunity()
         {
             return View();
+        }
+        [HttpPost]
+        public ActionResult CreateOpportunity(Opportunity opportunity)
+        {
+            return View("CreateConfirm", opportunity);
+
+
+        }
+        public ViewResult CreateConfirm(Opportunity opportunity)
+        {
+            return View("CreateConfirm", opportunity);
         }
         public ActionResult SearchOpportunity()
         {

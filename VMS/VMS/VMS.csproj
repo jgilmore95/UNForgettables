@@ -232,6 +232,7 @@
     <Content Include="Views\Opportunity\ViewOpportunityVolunteer.cshtml" />
     <Content Include="Views\Volunteer\ViewVolunteerOpportunity.cshtml" />
     <Content Include="Views\Opportunity\CreateOpportunity.cshtml" />
+    <Content Include="Views\Opportunity\CreateConfirm.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
